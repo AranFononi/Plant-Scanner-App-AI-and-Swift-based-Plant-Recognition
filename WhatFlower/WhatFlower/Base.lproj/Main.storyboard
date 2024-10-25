@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IhQ-Gg-SG8">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Flower Scan-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatFlower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kmy-2I-0oj">
+                                <rect key="frame" x="0.0" y="113" width="393" height="393"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Kmy-2I-0oj" secondAttribute="height" multiplier="1:1" id="PWq-pl-s20"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pu0-GT-8s2">
+                                <rect key="frame" x="20" y="526" width="353" height="306"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pu0-GT-8s2" secondAttribute="bottom" constant="20" id="Gx7-wK-HPY"/>
+                            <constraint firstItem="Kmy-2I-0oj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="M37-VF-Hk2"/>
+                            <constraint firstItem="Kmy-2I-0oj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PkP-OY-LyO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pu0-GT-8s2" secondAttribute="trailing" constant="20" id="fD3-Cl-c5J"/>
+                            <constraint firstItem="pu0-GT-8s2" firstAttribute="top" secondItem="Kmy-2I-0oj" secondAttribute="bottom" constant="20" id="ftk-EF-R3J"/>
+                            <constraint firstItem="pu0-GT-8s2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="h2E-BQ-FzP"/>
+                            <constraint firstItem="Kmy-2I-0oj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lIZ-2M-g6R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Flower Scan" id="8V2-kO-dAg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="RdD-XE-iU9">
+                            <connections>
+                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="0xk-ft-ahf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="Kmy-2I-0oj" id="QKf-Jb-trb"/>
+                        <outlet property="label" destination="pu0-GT-8s2" id="dOF-dK-Pum"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988.54961832061065" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZHg-fT-zHt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IhQ-Gg-SG8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tt1-4E-rbw">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aRS-Kr-xQ6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="doc-tL-pTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.832061068702288" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
