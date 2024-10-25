@@ -5,7 +5,7 @@
 This app is a plant identifier that scans and recognizes different plant species, then fetches relevant information from Wikipedia. This project leverages Core ML for image classification and integrates third-party libraries like **Alamofire** and **SwiftyJSON** for network requests, as well as **SDWebImage** for image handling.
 
 ## Project Overview
-The **Plant Scanner App** allows users to identify plants using a Core ML model. Users can capture plant images directly within the app, which then runs a Vision request to classify the image. Based on the classification, the app retrieves information from Wikipedia to give users more details about the plant.
+The **Plant Scanner App** allows users to identify plants using a Core ML model. Users can capture plant images directly within the app, which then runs a Vision request to classify the image. Based on the classification, the app retrieves information from Wikipedia to give users more details about the plant. Unfortunately It wasn't possible to add .MLModel to Github , you can either download FlowerClassification.mlmodel and put it inside main folder , or you can download it from this link :). **iCloud Link** : [iCloud Link](https://www.icloud.com/iclouddrive/03419PsPzbURgXIGoPnokiTrg#FlowerClassification](https://www.icloud.com/iclouddrive/03419PsPzbURgXIGoPnokiTrg#FlowerClassification))
 
 ## What I Learned
 Through building this app, I enhanced my understanding of:
